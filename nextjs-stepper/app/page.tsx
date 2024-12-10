@@ -53,6 +53,7 @@ const HomePage = () => {
       <div className="section">
         <div className="container">
           <div className="wrapper">
+            <h1>NextJS Stepper (Progress Indicator)</h1>
             <div className="stepper_ctn">
               {stepper_data.map((stepper, index) => {
                 return (
