@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  padding-block: 80px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  height: 100%;
+  padding-inline: 16px;
+  margin: auto;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.stepper_ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 64px;
+  position: relative;
+}
+
+.stepper_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  cursor: pointer;
+}
+
+.stepper_wrapper .stepper_number_ctn {
+  border: 1px solid #000000;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.stepper_number_ctn .stepper_number {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #000000;
+  scale: 0;
+  transition: all 0.2s linear;
+}
+
+.stepper_wrapper.active .stepper_number_ctn .stepper_number {
+  scale: 1;
+}
+
+.stepper_wrapper.completed .stepper_number_ctn .stepper_number {
+  scale: 1;
+}
+
+.stepper_wrapper .stepper_name {
+  font-weight: 600;
+  transition: all 0.2s linear;
+}
+
+.stepper_ctn .stepper_bar_ctn {
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  background-color: #000000;
+  z-index: -1;
+  transition: all 0.3s linear;
+}
+
+.stepper_next_prev_ctn {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.stepper_next_prev_ctn .stepper_btn {
+  border: 1px solid black;
+  padding: 6px 16px;
+  font-weight: 600;
+  border-radius: 4px;
+}
